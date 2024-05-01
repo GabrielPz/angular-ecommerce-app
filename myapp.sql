@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Maio-2024 às 22:35
+-- Tempo de geração: 01-Maio-2024 às 22:53
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.1.13
 
@@ -76,14 +76,15 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `user_id` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_orders_users1_idx` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Extraindo dados da tabela `orders`
 --
 
 INSERT INTO `orders` (`id`, `user_id`) VALUES
-(122, 22);
+(122, 22),
+(123, 22);
 
 -- --------------------------------------------------------
 
@@ -100,14 +101,15 @@ CREATE TABLE IF NOT EXISTS `orders_details` (
   PRIMARY KEY (`id`),
   KEY `fk_orders_has_products_products1_idx` (`product_id`),
   KEY `fk_orders_has_products_orders1_idx` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=202 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=203 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Extraindo dados da tabela `orders_details`
 --
 
 INSERT INTO `orders_details` (`id`, `order_id`, `product_id`, `quantity`) VALUES
-(201, 122, 66, 1);
+(201, 122, 66, 1),
+(202, 123, 70, 1);
 
 -- --------------------------------------------------------
 
@@ -135,16 +137,13 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `image`, `images`, `description`, `price`, `quantity`, `short_desc`, `cat_id`) VALUES
-(64, 'Floral Dress', 'img_floral_dress.jpg', 'img1.jpg,img2.jpg,img3.jpg', 'The perfect summer floral dress, light and colorful.', 59.99, 10, 'Light summer dress', 1),
-(65, 'Slim Fit Jeans', 'img_slim_fit_jeans.jpg', 'img4.jpg,img5.jpg,img6.jpg', 'Comfortable and stylish slim fit jeans.', 89.99, 15, 'Stylish slim jeans', 2),
-(66, 'Evening Gown', 'img_evening_gown.jpg', 'img7.jpg,img8.jpg,img9.jpg', 'Elegant dress for special occasions.', 120, 4, 'Elegance and style', 1),
-(67, 'White Dress Shirt', 'img_white_dress_shirt.jpg', 'img10.jpg,img11.jpg,img12.jpg', 'Essential white dress shirt for any wardrobe.', 49.99, 20, 'Classic and essential', 2),
-(68, 'Linen Trousers', 'img_linen_trousers.jpg', 'img13.jpg,img14.jpg,img15.jpg', 'Light linen trousers, ideal for warm weather.', 69.99, 15, 'Summer comfort', 2),
-(69, 'Casual Midi Dress', 'img_casual_midi_dress.jpg', 'img16.jpg,img17.jpg,img18.jpg', 'Casual midi dress perfect for outdoor strolls.', 75, 8, 'Casual and charming', 1),
-(70, 'Basic Grey T-shirt', 'img_basic_grey_tshirt.jpg', 'img19.jpg,img20.jpg,img21.jpg', 'Basic grey t-shirt, matches everything.', 25.99, 30, 'Versatile and comfortable', 2),
-(71, 'Cargo Pants', 'img_cargo_pants.jpg', 'img22.jpg,img23.jpg,img24.jpg', 'Practical and modern cargo pants with multiple pockets.', 95, 12, 'Style and practicality', 2),
-(72, 'Printed Long Dress', 'img_printed_long_dress.jpg', 'img25.jpg,img26.jpg,img27.jpg', 'Chic long printed dress with a unique design.', 85, 7, 'Chic and contemporary', 1),
-(73, 'Beige Chino Pants', 'img_beige_chino.jpg', 'img28.jpg,img29.jpg,img30.jpg', 'Ideal beige chino pants for a casual work look.', 79.99, 20, 'Workplace classic', 2);
+(64, 'Floral Dress', 'https://acdn.mitiendanube.com/stores/002/037/298/products/vestido_feminino_rodado_estampado_moda_roupas_femininas_2315_variacao_7383_1_3bb5affa5fb59dba7a4c1dd26c3b64e6-ba7a4c1dd26c3b64e616492706275520-1024-1024.jpg', 'https://acdn.mitiendanube.com/stores/002/037/298/products/vestido_feminino_rodado_estampado_moda_roupas_femininas_2315_variacao_7383_1_3bb5affa5fb59dba7a4c1dd26c3b64e6-ba7a4c1dd26c3b64e616492706275520-1024-1024.jpg', 'The perfect summer floral dress, light and colorful.', 59.99, 10, 'Light summer dress', 1),
+(65, 'Slim Fit Jeans', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_FFZOXyCBcmoJrEQtwEfLhNBTXQQxEf7Ge7ubINMj0A&s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_FFZOXyCBcmoJrEQtwEfLhNBTXQQxEf7Ge7ubINMj0A&s', 'Comfortable and stylish slim fit jeans.', 89.99, 15, 'Stylish slim jeans', 2),
+(66, 'Evening Gown', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmyvUAmGbfIc5cSSjvPT6n1iqC1wP13S7_bJ2O1dEZA&s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmyvUAmGbfIc5cSSjvPT6n1iqC1wP13S7_bJ2O1dEZA&s', 'Elegant dress for special occasions.', 120, 4, 'Elegance and style', 1),
+(67, 'White Dress Shirt', 'https://i.pinimg.com/736x/ab/95/b2/ab95b293dbc9d987b5a7b08d3cce26e0.jpg', 'https://i.pinimg.com/736x/ab/95/b2/ab95b293dbc9d987b5a7b08d3cce26e0.jpg', 'Essential white dress shirt for any wardrobe.', 49.99, 20, 'Classic and essential', 2),
+(68, 'Linen Trousers', 'https://acdn.mitiendanube.com/stores/002/037/298/products/vestido_feminino_rodado_estampado_moda_roupas_femininas_2315_2_c01626b6fc81c1ea5927f4e1b223ff35-ea5927f4e1b223ff3516492706084994-1024-1024.jpg', 'https://acdn.mitiendanube.com/stores/002/037/298/products/vestido_feminino_rodado_estampado_moda_roupas_femininas_2315_2_c01626b6fc81c1ea5927f4e1b223ff35-ea5927f4e1b223ff3516492706084994-1024-1024.jpg', 'Light linen trousers, ideal for warm weather.', 69.99, 15, 'Summer comfort', 2),
+(69, 'Casual Midi Dress', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMyEliOwPS1OJjmlrg-Ae1XDQNqWFllFGpo2q67rOzgg&s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMyEliOwPS1OJjmlrg-Ae1XDQNqWFllFGpo2q67rOzgg&s', 'Casual midi dress perfect for outdoor strolls.', 75, 8, 'Casual and charming', 1),
+(70, 'Shoes', 'https://hips.hearstapps.com/hmg-prod/images/hoka-zinal-13085-1643565794.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*', 'https://hips.hearstapps.com/hmg-prod/images/hoka-zinal-13085-1643565794.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*', 'Basic SHoes', 25.99, 29, 'Versatile and comfortable', 2);
 
 -- --------------------------------------------------------
 
