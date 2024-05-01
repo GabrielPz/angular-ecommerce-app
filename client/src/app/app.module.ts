@@ -11,7 +11,6 @@ import { CartComponent } from './cart/cart.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ProductComponent } from './product/product.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductCardComponent } from './product-card/product-card.component';
@@ -48,7 +47,6 @@ registerLocaleData(en);
     OrderHistoryComponent,
     ProductComponent,
     CheckoutComponent,
-    ProfileComponent,
     HeaderComponent,
     FooterComponent,
     ProductCardComponent,

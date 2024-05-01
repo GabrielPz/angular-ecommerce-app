@@ -68,3 +68,7 @@ DB_USER='root'
 DB_PASSWORD=''
 DB_NAME='myapp'
 ```
+
+
+## Observação
+Caso a tela de checkout apareça com bugs(ou mal carregada) basta dar um refresh na página.
