@@ -49,7 +49,7 @@ npm run start
 
 <br/>
 
-## Prerequisites
+## Pré-requisitos
 
 Você precisará ter node e npm instalados. Além disso, você precisará de um servidor MySQL em execução para ter a funcionalidade completa do aplicativo. Pode usar um Wampserver ou Xampserver, após a instalção do seu servidor MySQL importe o banco de dados 'myapp.sql' localizado no diretorio da aplicação.
 
