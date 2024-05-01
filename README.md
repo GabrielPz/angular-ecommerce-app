@@ -44,7 +44,7 @@ npm run dev
 **client**
 
 ```
-ng serve
+npm run start
 ```
 
 <br/>
